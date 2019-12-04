@@ -1,27 +1,38 @@
-/* pages/common/myinfo.wxss */
-.blank {
-  height: 60rpx;
-  background-color: #E8EAEC;
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
 }
-
 .userinfo {
-  height: 200rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 40rpx;
-  flex-wrap: nowrap;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  width: 750rpx;
 }
 .userinfo-avatar {
-  height: 120rpx;
-  width: 120rpx;
-  border-radius: 120rpx;
-  border-width: 1rpx;
-  display: flex;
-  background-color: black;
+	width: 160rpx;
+	height: 160rpx;
 }
 .userinfo-nickname {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 14px;
+}
+.asset {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  border-top: 1px solid #eee;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.asset .item {
+  display: flex;
+  flex-direction: column;
+  width:250rpx;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  color:#333;
+}
+.asset .right {
+  border-left: 1px solid #eee;
 }
