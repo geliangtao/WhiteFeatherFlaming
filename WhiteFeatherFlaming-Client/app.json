@@ -1,14 +1,40 @@
 {
   "pages": [
+    "pages/common/myinfo",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#2177C7",
+    "navigationBarTitleText": "互联网金融-演示",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#E5E5E5"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#222222",
+    "selectedColor": "#88D6FF",
+    "backgroundColor": "#2177C7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "智能存款"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "权益"
+      },
+      {
+        "pagePath": "pages/common/myinfo",
+        "text": "我的"
+      }
+    ]
+  }
 }

@@ -19,3 +19,10 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.navigator-hover {
+  color:blue;
+}
+.other-navigator-hover {
+  color:red;
+}

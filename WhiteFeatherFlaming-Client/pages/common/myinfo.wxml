@@ -1,0 +1,11 @@
+<view>
+<view class="blank" />
+<view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"     bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <view wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="blank" />
+</view>

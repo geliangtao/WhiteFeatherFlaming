@@ -1,0 +1,27 @@
+/* pages/common/myinfo.wxss */
+.blank {
+  height: 60rpx;
+  background-color: #E8EAEC;
+}
+
+.userinfo {
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40rpx;
+  flex-wrap: nowrap;
+}
+.userinfo-avatar {
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 120rpx;
+  border-width: 1rpx;
+  display: flex;
+  background-color: black;
+}
+.userinfo-nickname {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
