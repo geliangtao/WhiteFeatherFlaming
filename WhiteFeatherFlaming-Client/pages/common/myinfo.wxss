@@ -2,6 +2,7 @@
   min-height: 100%;
   overflow: hidden;
   overflow-y: hidden;
+  padding: 10rpx;
 }
 .userinfo {
 	display: flex;
@@ -12,6 +13,7 @@
 .userinfo-avatar {
 	width: 160rpx;
 	height: 160rpx;
+  border-radius: 50%;
 }
 .userinfo-nickname {
   margin-top: 20rpx;
@@ -35,4 +37,23 @@
 }
 .asset .right {
   border-left: 1px solid #eee;
+}
+.my-item{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    border-bottom: 1px solid #eee;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 100rpx;
+    font-size:14px;
+}
+.about{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    margin: 20rpx 0; 
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 100rpx;
 }

@@ -1,16 +1,23 @@
 <view class="container">
-	<view wx:if="{{apiUserInfoMap}}" class="userinfo">
-		<image wx:if="{{apiUserInfoMap.base.avatarUrl}}" class="userinfo-avatar" src="{{ apiUserInfoMap.base.avatarUrl }}" background-size="cover"></image>
-		<text class="userinfo-nickname">{{ apiUserInfoMap.base.nick }}</text>
+	<view wx:if="{{wxlogin && hasUserInfo}}" class="userinfo">
+		<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 	</view>
   <view wx:else class="userinfo" style="margin-bottom:50rpx;">
 		<image class="userinfo-avatar" src="../../images/nologin.png" background-size="cover"></image>
-		<button class="weui-btn mini-btn" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">点击登录</button>
+		<button class="weui-btn mini-btn" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
 	</view>
   <view wx:if="{{ rechargeOpen }}" class="asset">
     <view class='item' bindtap='goAsset'>
-      <view>{{balance}}</view>
-      <view>钱包余额</view>
+      <view wx:if="{{ isopenacct }}">
+        <view>{{balance}}</view>
+        <view>钱包余额</view>
+      </view>
+      <view wx:else="{{ isopenacct }}" class="package" style="color: #2177C7;" >
+          <navigator url="pages/logs/logs" hover-class="navigator-hover">
+          <text>开通\n钱包</text>
+          </navigator>
+      </view>
     </view>
     <view class='item right' bindtap='goAsset'>
       <view>{{freeze}}</view>
@@ -22,4 +29,30 @@
     </view>
   </view>
   <view style="height:10rpx;background: #eee;width:100%;"></view>
+  <view class="my-item">
+    <navigator url="/pages/asset/index" hover-class="navigator-hover">可用卡券</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/asset/index" hover-class="navigator-hover">钱包明细</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/score-excharge/index" hover-class="navigator-hover">积分兑换</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/sign/index" hover-class="navigator-hover">每日签到</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/select-address/index" hover-class="navigator-hover">收货地址</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/coupons/index" hover-class="navigator-hover">领券中心</navigator>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="my-item" bindtap="aboutUs">
+    关于我们
+  </view>
+  <view wx:if="{{wxlogin && hasUserInfo}}" class="my-item" bindtap="loginOut" style="color:red;font-weight:bold;">
+    退出登录
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
 </view>
